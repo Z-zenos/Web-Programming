@@ -1,0 +1,326 @@
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --color-white--: #fff;
+  --color-gray--: #ccc;
+  --color-background--: #f7f7f7;
+  --color-blue--: #0d6efD;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-blue--);
+}
+
+.st-box {
+  width: 31.25em;
+  background-color: var(--color-white--);
+  padding: 5em 3.75em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.7em;
+  box-shadow: 0 1em 4em rgba(71, 50, 4, 0.3);
+}
+input {
+  border: none;
+  outline: none;
+  display: block;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 2em;
+  padding: 1em 0 0.5em 0.5em;
+  border-bottom: 2px solid #202020;
+}
+
+#message-ref {
+  font-size: 0.9em;
+  margin-top: 1.5em;
+  color: #34bd34;
+  visibility: hidden;
+}
+
+::selection{
+  color: var(--color-white--);
+  background: var(--color-blue--);
+}
+
+.st-box{
+  width: 715px;
+  background: var(--color-white--);
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+}
+.st-box header{
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--color-gray--);
+}
+
+.st-box form{
+  margin: 35px 30px;
+}
+
+.st-box form.disabled{
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+form .st-group {
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.st-group .field {
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+
+.field .label {
+  position: absolute;
+  font-size: 1.6rem;
+  left: 5rem;
+  top: 50%;
+  transform: translateY(-45%);
+  opacity: .3;
+  transition: all .3s ease;
+  z-index: -1;
+}
+
+.st-box form i  {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: var(--color-gray--);
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+form .field input,
+form .message textarea{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--color-gray--);
+}
+
+.field input::placeholder,
+.message textarea::placeholder{
+  color: var(--color-gray--);
+}
+
+.field input:focus,
+.message textarea:focus {
+  padding-left: 47px;
+  border: 2px solid var(--color-blue--);
+}
+
+.field input:focus ~ i,
+.message textarea:focus ~ i {
+  color: var(--color-blue--);
+}
+
+.label.up {
+  color: var(--color-blue--);
+  top: 0;
+  background: var(--color-white--);
+  padding: 0 1rem;
+  left: 4rem;
+  font-size: 1.3rem;
+  opacity: 1;
+  z-index: 9;
+}
+
+.st-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  column-gap: 10px;
+  margin-bottom: 4rem;
+}
+
+.st-flex label {
+  margin-left: .5rem;
+  font-size: 1.3rem;
+  color: var(--color-blue--);
+}
+
+.multiselect {
+  width: 100%;
+  position: relative;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.st-date {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.selectBox select,
+input[type="date"] {
+  margin: 0 auto;
+  width: 95%;
+  font-weight: bold;
+  height: 4rem;
+  background-color: var(--color-white--);
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 0;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#checkboxes {
+  width: 95%;
+  display: none;
+  border: 1px #dadada solid;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  z-index: 9999;
+  background: var(--color-white--);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .3);
+}
+
+.multiselect input {
+  width: 2rem;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+#checkboxes label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 3.2rem;
+  margin-left: 0;
+  cursor: pointer;
+}
+
+#checkboxes label:hover {
+  background-color: #efeefe;
+}
+
+.st-box .upload-box {
+  height: 15rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed var(--color-blue--);
+  flex-basis: 22%;
+}
+.st-box.active .upload-box{
+  border: none;
+}
+.upload-box p {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  color: var(--color-blue--);
+}
+.st-box.active .upload-box p {
+  display: none;
+}
+
+.upload-box img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 5px;
+  color: var(--color-blue--);
+}
+
+form .message {
+  position: relative;
+  flex-basis: 70%;
+  text-align: right;
+  height: 15rem;
+}
+
+form .message i {
+  top: 30px;
+  font-size: 20px;
+}
+
+form .message textarea {
+  height: 90%;
+  width: 40rem;
+  padding-top: 1.5rem;
+  /*padding: 15px 20px 0 48px;*/
+}
+
+form .message textarea::-webkit-scrollbar{
+  width: 0;
+}
+
+.message textarea:focus{
+  padding-top: 14px;
+}
+
+form .st__button {
+  margin: 2.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  color: var(--color-white--);
+  border: 1px solid var(--color-white--);
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  padding: 1.3rem 2.5rem;
+  background: var(--color-blue--);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--color-white--);
+  color: var(--color-blue--);
+  border: 1px solid var(--color-blue--);
+}
+
+.st__button span {
+  font-size: 1.7rem;
+  margin-left: 3rem;
+  display: none;
+}
